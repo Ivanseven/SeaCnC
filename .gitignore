@@ -14,3 +14,7 @@
 
 # Ignore application configuration
 /config/application.yml
+
+
+# Ignore sail_boat
+/public/sail_boat1600.png

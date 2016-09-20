@@ -37,6 +37,9 @@
 
 <div class="container-fluid red">
 <div class="row">
+      <div class="col-xs-2">
+        <a href="/" data-toggle="tooltip" title="Sail The Seven Seas!"><img src="sail_boat1600.png" alt="SeaCnC Logo" height="20" width="20"> SeaCnC</a>
+      </div>
     <% if signed_in? %>
     <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
       Signed in as: <%= current_user.email %>
@@ -47,10 +50,10 @@
   data-width="450"
   data-show-faces="true">
 </div>
+
+</div>
+</div>
     <% else %>
-      <div class="col-xs-2">
-        <a href="/" data-toggle="tooltip" title="But not yours.">Home</a>
-      </div>
       <div class="col-xs-8">
       </div>
       <div class="col-xs-2">

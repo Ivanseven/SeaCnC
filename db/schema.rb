@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160915090642) do
+ActiveRecord::Schema.define(version: 20160920063751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amenities", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "category"
+  end
 
   create_table "authentications", force: :cascade do |t|
     t.string   "uid"
@@ -23,6 +29,32 @@ ActiveRecord::Schema.define(version: 20160915090642) do
     t.string   "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "listing_amenities", force: :cascade do |t|
+    t.string "listing_id"
+    t.string "amenity_id"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.string   "name"
+    t.string   "about"
+    t.string   "owner_id"
+    t.string   "location"
+    t.string   "price"
+    t.string   "capacity"
+    t.string   "bathrooms"
+    t.string   "bedrooms"
+    t.string   "beds"
+    t.string   "bed_type"
+    t.string   "property_type"
+    t.string   "room_type"
+    t.string   "check_in_time"
+    t.string   "check_out_time"
+    t.string   "instant_book"
+    t.string   "reserved_dates"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
